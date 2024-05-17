@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="buttons">
+      <button class="button" (click)="refreshActivity()">Refresh Activity</button>
+      <button class="button" (click)="refreshDog()">Refresh Dog</button>
+      <button class="button" (click)="refreshJoke()">Refresh Joke</button>
+    </div>
+    <div class="data">
+      <p *ngIf="activity">Get bored? Do this activity: {{activity | json}}</p>
+      <img *ngIf="imageUrl" [src]="imageUrl" alt="Dog Image">
+      <p *ngIf="joke">{{joke.setup}} - {{joke.punchline}}</p>
+    </div>
+  </div>
+  
